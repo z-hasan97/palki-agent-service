@@ -20,4 +20,13 @@ export class Agent extends BaseEntity {
 
   @Column('simple-array', { nullable: true, default: '' })
   clientIds: string[];
+
+  @Column({ type: 'decimal', default: 10.0 })
+  commissionPercent: number;
+
+  @Column({ type: 'decimal', default: 0 })
+  totalEarnings: number;
+
+  @Column({ default: 0 })
+  successfulMatches: number;
 }
